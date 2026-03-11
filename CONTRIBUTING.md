@@ -52,49 +52,55 @@ git checkout -b feature/my-feature-name
 ```
 tickets-de-qualitad/
 │
-├── public/
+├── docs/                     # documentation du projet
+│   ├── architecture.md
+│   └── developer-charter.md
 │
-├── src/
-│   ├── assets/            # images, icons, etc.
+├── ticket_system/            # application React/Vite
 │   │
-│   ├── components/        # composants React réutilisables
-│   │   ├── TicketCard/
-│   │   ├── TicketForm/
-│   │   └── Navbar/
+│   ├── public/
 │   │
-│   ├── pages/             # pages de l'application
-│   │   ├── Dashboard.tsx
-│   │   ├── TicketList.tsx
-│   │   ├── TicketDetail.tsx
-│   │   └── CreateTicket.tsx
+│   ├── src/
+│   │   ├── assets/           # images / icones
+│   │   │
+│   │   ├── components/       # composants React réutilisables
+│   │   │   ├── TicketCard/
+│   │   │   ├── TicketForm/
+│   │   │   └── Navbar/
+│   │   │
+│   │   ├── pages/            # pages de l'application
+│   │   │   ├── Dashboard.tsx
+│   │   │   ├── TicketList.tsx
+│   │   │   ├── TicketDetail.tsx
+│   │   │   └── CreateTicket.tsx
+│   │   │
+│   │   ├── models/           # types TypeScript
+│   │   │   ├── Ticket.ts
+│   │   │   └── User.ts
+│   │   │
+│   │   ├── services/         # logique métier
+│   │   │   └── ticketService.ts
+│   │   │
+│   │   ├── database/         # données JSON locales
+│   │   │   └── tickets.json
+│   │   │
+│   │   ├── hooks/            # hooks React personnalisés
+│   │   │
+│   │   ├── styles/
+│   │   │   └── global.css
+│   │   │
+│   │   ├── tests/            # unit tests
+│   │   │
+│   │   ├── App.tsx
+│   │   ├── main.tsx
+│   │   └── vite-env.d.ts
 │   │
-│   ├── models/            # types TypeScript
-│   │   ├── Ticket.ts
-│   │   └── User.ts
-│   │
-│   ├── services/          # logique métier
-│   │   └── ticketService.ts
-│   │
-│   ├── database/          # gestion JSON locale
-│   │   └── tickets.json
-│   │
-│   ├── hooks/             # custom React hooks
-│   │
-│   ├── styles/            # CSS global
-│   │   └── global.css
-│   │
-│   ├── tests/             # unit tests
-│   │
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── vite-env.d.ts
-│
-├── docs/                  # documentation
-│
-├── package.json
-├── package-lock.json
-├── tsconfig.json
-├── vite.config.ts
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── tsconfig.json
+│   ├── .gitignore
+│   └── vite.config.ts
 │
 ├── .gitignore
 ├── CONTRIBUTING.md
