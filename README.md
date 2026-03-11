@@ -48,7 +48,7 @@ Supervisors can:
 * **SFML** – graphical user interface
 * **JSON** – local database
 * **Git** – version control
-* **Unit Testing Framework** (to ensure code reliability)
+* **Unit Testing with Google Test**
 
 Libraries:
 
@@ -127,8 +127,6 @@ The system supports three roles:
 ### Requirements
 
 * C++17 or newer
-* nlohmann-json
-* SFML
 * CMake
 
 ### Install SFML (Mac example)
@@ -147,11 +145,12 @@ cd tickets-de-qualitad
 ### Build the project
 
 ```bash
-mkdir build
-cd build
-cmake ..
-make
+cd src
+cmake -B build
+cmake --build build
 ```
+
+It will download all necessary libraries or tools for the good functionning of the application.
 
 ---
 
