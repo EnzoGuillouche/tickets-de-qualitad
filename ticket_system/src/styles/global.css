@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.navbar .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.ticket-card,
+.ticket-list,
+.ticket-detail,
+.create-ticket,
+.dashboard,
+.login-page {
+  padding: 1rem;
+}
+
+.ticket-card {
+  border: 1px solid #ccc;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+.edit-form label,
+.create-ticket form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.edit-form select,
+.create-ticket form select,
+.edit-form input,
+.create-ticket form input,
+.edit-form textarea,
+.create-ticket form textarea {
+  width: 100%;
+  padding: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+button {
+  margin-top: 0.5rem;
+}

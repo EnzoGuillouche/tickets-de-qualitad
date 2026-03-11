@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Network issue",
+    "description": "Cannot connect to the VPN",
+    "author": "user1",
+    "assigned_to": "admin1",
+    "priority": "high",
+    "status": "open",
+    "responses": []
+  },
+  {
+    "id": 2,
+    "title": "caca partout",
+    "description": "vegeta est dans le caca",
+    "author": "admin1",
+    "assigned_to": "admin1",
+    "priority": "medium",
+    "status": "closed",
+    "responses": []
+  }
+]
