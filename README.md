@@ -44,38 +44,12 @@ Supervisors can:
 
 ## Technologies Used
 
-* **C++**
-* **SFML** – graphical user interface
-* **JSON** – local database
+* **React/Vite**
+* **Typescript**
+* **CSS**
 * **Git** – version control
-* **Unit Testing with Google Test**
-
-Libraries:
-
-* `SFML`
-* `nlohmann/json`
-
----
-
-## Project Architecture
-
-The project follows a **layered architecture** separating responsibilities.
-
-```
-Application
-│
-├── UI Layer (SFML)
-│   Handles graphical interface and user interactions
-│
-├── Service Layer
-│   Business logic for ticket management
-│
-├── Model Layer
-│   Data structures (User, Ticket, etc.)
-│
-└── Data Layer
-    JSON storage management
-```
+* **npm**
+* **Unit Testing**
 
 ---
 
@@ -126,8 +100,7 @@ The system supports three roles:
 
 ### Requirements
 
-* C++17 or newer
-* CMake
+* node
 
 ### Clone the repository
 
@@ -139,9 +112,8 @@ cd tickets-de-qualitad
 ### Build the project
 
 ```bash
-cd src
-cmake -B build
-cmake --build build
+cd app
+
 ```
 
 It will download all necessary libraries or tools for the good functionning of the application.
@@ -163,21 +135,52 @@ After building:
 ```
 tickets-de-qualitad/
 │
+├── public/
+│
 ├── src/
-│   ├── ticket_system.cpp
-│   ├── ui/
-│   ├── models/
-│   └── database/
+│   ├── assets/            # images, icons, etc.
+│   │
+│   ├── components/        # composants React réutilisables
+│   │   ├── TicketCard/
+│   │   ├── TicketForm/
+│   │   └── Navbar/
+│   │
+│   ├── pages/             # pages de l'application
+│   │   ├── Dashboard.tsx
+│   │   ├── TicketList.tsx
+│   │   ├── TicketDetail.tsx
+│   │   └── CreateTicket.tsx
+│   │
+│   ├── models/            # types TypeScript
+│   │   ├── Ticket.ts
+│   │   └── User.ts
+│   │
+│   ├── services/          # logique métier
+│   │   └── ticketService.ts
+│   │
+│   ├── database/          # gestion JSON locale
+│   │   └── tickets.json
+│   │
+│   ├── hooks/             # custom React hooks
+│   │
+│   ├── styles/            # CSS global
+│   │   └── global.css
+│   │
+│   ├── tests/             # unit tests
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── vite-env.d.ts
 │
-├── tests/
+├── docs/                  # documentation
 │
-├── data/
-│   └── tickets.json
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── vite.config.ts
 │
-├── docs/
-│
-├── CMakeLists.txt
-└── CONTRIBUTING.md
+├── .gitignore
+├── CONTRIBUTING.md
 └── README.md
 ```
 

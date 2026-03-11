@@ -43,15 +43,7 @@ git checkout -b feature/my-feature-name
 
 ## Requirements
 
-* C++17 or newer
-* CMake
-* Git
-
-Libraries used:
-
-* SFML
-* nlohmann/json
-* Google Test (for unit tests)
+* node
 
 ---
 
@@ -60,23 +52,52 @@ Libraries used:
 ```
 tickets-de-qualitad/
 │
+├── public/
+│
 ├── src/
-│   ├── main.cpp
-│   ├── ui/
-│   ├── models/
-│   └── database/
+│   ├── assets/            # images, icons, etc.
+│   │
+│   ├── components/        # composants React réutilisables
+│   │   ├── TicketCard/
+│   │   ├── TicketForm/
+│   │   └── Navbar/
+│   │
+│   ├── pages/             # pages de l'application
+│   │   ├── Dashboard.tsx
+│   │   ├── TicketList.tsx
+│   │   ├── TicketDetail.tsx
+│   │   └── CreateTicket.tsx
+│   │
+│   ├── models/            # types TypeScript
+│   │   ├── Ticket.ts
+│   │   └── User.ts
+│   │
+│   ├── services/          # logique métier
+│   │   └── ticketService.ts
+│   │
+│   ├── database/          # gestion JSON locale
+│   │   └── tickets.json
+│   │
+│   ├── hooks/             # custom React hooks
+│   │
+│   ├── styles/            # CSS global
+│   │   └── global.css
+│   │
+│   ├── tests/             # unit tests
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── vite-env.d.ts
 │
-├── tests/
+├── docs/                  # documentation
 │
-├── data/
-│   └── tickets.json
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── vite.config.ts
 │
-├── docs/
-│   ├── developer-charter.md
-│   └── architecture.md
-│
-├── CMakeLists.txt
-└── CONTRIBUTING.md
+├── .gitignore
+├── CONTRIBUTING.md
 └── README.md
 ```
 
@@ -133,23 +154,6 @@ Pull requests should include:
 All core logic must be covered by **unit tests**.
 
 Tests are located in the `tests/` directory.
-
-Example test:
-
-```cpp
-TEST_CASE("Ticket creation works") {
-    TicketManager manager;
-    auto ticket = manager.createTicket("Network issue", "Cannot connect");
-
-    REQUIRE(ticket.getTitle() == "Network issue");
-}
-```
-
-Run tests using:
-
-```
-ctest
-```
 
 ---
 
