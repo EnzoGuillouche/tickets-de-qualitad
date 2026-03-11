@@ -1,0 +1,7 @@
+.DS_Store
+.vscode
+
+# ticket_system artifacts
+/ticket_system/node_modules
+/ticket_system/dist
+/ticket_system/.vite
