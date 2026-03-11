@@ -129,12 +129,6 @@ The system supports three roles:
 * C++17 or newer
 * CMake
 
-### Install SFML (Mac example)
-
-```bash
-brew install sfml
-```
-
 ### Clone the repository
 
 ```bash
@@ -170,7 +164,7 @@ After building:
 tickets-de-qualitad/
 │
 ├── src/
-│   ├── main.cpp
+│   ├── ticket_system.cpp
 │   ├── ui/
 │   ├── models/
 │   └── database/
@@ -181,8 +175,6 @@ tickets-de-qualitad/
 │   └── tickets.json
 │
 ├── docs/
-│   ├── developer-charter.md
-│   └── architecture.md
 │
 ├── CMakeLists.txt
 └── CONTRIBUTING.md
@@ -214,12 +206,12 @@ Tests cover:
 * Status updates
 * Permission checks
 
-To run tests:
+<!-- To run tests:
 
 ```bash
-ctest
-```
-
+gtest
+``` 
+-->
 ---
 
 ## Future Improvements
